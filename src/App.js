@@ -5,7 +5,8 @@ const alphabet = "a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e 
 const Container = styled.div` 
  display:flex;
  padding:0px;
- min-height: 100vh;
+
+ min-height: 10vh;
 `;
 
 const Resizer = styled.div`
@@ -76,7 +77,19 @@ function Example() {
 // const eastSection = <East key="east">{alphabet}</East>
 // allParts.push(eastSection);
 
-  return <Container >{allParts}</Container>
+  return (
+    <Container>
+      <div style={{width:"300px", height:"1000px"}}>
+      <p>Test</p>
+   <span>Test span</span>
+   <div className="testclick" onClick={()=>console.log("div clicked")}>this is test div</div>
+   <button onClick={()=>console.log("buttonclicked")}>button test</button>
+
+      </div>
+
+    </Container>
+  )
+  // <Container >{allParts}</Container>
 }
 
 function App() {

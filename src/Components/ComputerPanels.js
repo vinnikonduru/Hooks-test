@@ -87,11 +87,11 @@ export default function ComputerPanels(props) {
     // First Resizer start
     let firstResizer = <Resizer
         // onMouseDown={() => setActiveResizer('first')}
-        onMouseDown={() => { resizeFirst() }}
+        // onMouseDown={() => { resizeFirst() }}
         key="firstResizer"
     ></Resizer>
 
-    allSections.push(firstResizer);
+    // allSections.push(firstResizer);
 
     // First Resizer ends
 
@@ -132,10 +132,10 @@ export default function ComputerPanels(props) {
     //Second Resizer starts
     let secondResizer = <Resizer key="secondResizer"
         // onMouseDown={() => setActiveResizer('second')}
-        onMouseDown={() => resizeSecond()}
+        // onMouseDown={() => resizeSecond()}
 
     />
-    allSections.push(secondResizer);
+    // allSections.push(secondResizer);
     //Second Resizer Ends
 
     //Third Section starts
@@ -148,5 +148,13 @@ export default function ComputerPanels(props) {
     allSections.push(thirdSection)
     //Third Section ends
 
-    return <LayoutContainer>{allSections}</LayoutContainer>
+    return(
+        <div onClick={()=>{console.log(clicked)}}> 
+            <h1>Cypress test</h1>
+            <button >
+                this is button
+            </button>
+        </div>
+    )
+    // <LayoutContainer>{allSections}</LayoutContainer>
 }
